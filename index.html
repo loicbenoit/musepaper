@@ -1,2 +1,160 @@
-<h1>Muse Paper</h1>
-<div>Express yourself</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Muse Paper</title>
+	<style>
+/* CSS reset */
+		*, *::before, *::after{
+			box-sizing: border-box; /* Set the sizing of an element to include it's border */
+		}
+
+		*{
+			margin: 0; /* Set the default margin to 0 */
+			padding: 0; /* Set the default padding to 0 */
+		}
+
+		ul[role='list'], ol[role='list']{
+			list-style: none; /* Turn off numbered and unordered list decoration */
+		}
+
+		html:focus-within{
+			scroll-behavior: smooth; /* Make the scrolling inside of any scrollable element smooth */
+		}
+
+		a:not([class]){
+			text-decoration-skip-ink: auto; /* Makes link undelines look better */
+		}
+
+		img, picture, svg, video, canvas{
+			max-width: 100%; /* Makes it responsive */
+			height: auto; /* Makes it responsive */
+			vertical-align: middle; /* Makes text next to inline images look better */
+			font-style: italic; /* If the images don't load it makes the alt decription look better */
+			background-repeat: no-repeat; 
+			/* The background repeat and size are there if you want to load a picture first like a backroung image that is worse quality while the better quality image loads */
+			background-size: cover;
+		}
+
+		input, button, textarea, select{
+			font: inherit; /* Makes these elements inherit fonts */
+		}
+
+		/* Turns off animation for people who don't want to see them */
+		@media (prefers-reduced-motion: reduce){
+			html:focus-within {
+				scroll-behavior: auto;
+			}
+			*, *::before, *::after {
+				animation-duration: 0.01ms !important;
+				animation-iteration-count: 1 !important;
+				transition-duration: 0.01ms !important;
+				scroll-behavior: auto !important;
+				transition: none;
+			}
+		}
+
+		body, html{
+			height: 100%; /* Makes the body element full screen */
+			scroll-behavior: smooth; /* Makes normal scrolling smooth */
+		}
+
+/* Page styles */
+		body, main
+		{
+			background-color: #333;
+			font-size: 16px;
+			overflow: scroll;
+		}
+		.title, .slogan
+		{
+			text-align: center;
+			marging: 0 auto;
+		}
+		.title
+		{
+			background-color: #f5f5f5;
+			display: flex;
+			font-size: 2rem;
+			justify-content: center;
+			align-items: center;
+			height: 50px;
+		}
+		.slogan
+		{
+			background-color: #4FFFB0;
+			color: #4B5320; /* #4B6F44; #568203; */
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 4rem;
+			height: auto;
+			min-height: 320px;
+		}
+		.footer
+		{
+			align-items: center;
+			background-color: #333;
+			color: #fff;
+			display: flex;
+			font-size: 1.5rem;
+			height: auto;
+			justify-content: center;
+			padding: 1.25rem;
+		}
+		.footer > div > p
+		{
+			display: inline;
+			text-align: left;
+		}
+
+		@media (min-width: 800px)
+		{
+			body
+			{
+				font-size: 16px;
+			}
+			.title
+			{
+				font-size: 2rem;
+				height: 10vh;
+				min-height: 50px;
+			}
+			.slogan
+			{
+				font-size: 8rem;
+				height: 70vh;
+				min-height: 320px;
+			}
+			.footer
+			{
+				font-size: 1.5rem;
+				height: 20vh;
+				min-height: 100px;
+			}
+			.footer > div > p
+			{
+				display: block;
+				text-align: center;
+			}
+		}
+	</style>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+		<h1 class="title">Muse Paper</h1>
+		<div class="slogan">Organize your creativity</div>
+    	<div class="footer">
+    		<div>
+				<p>2024-Q2</p>
+				<p>I'm currently in the process of creating an app for organizing ideas.</p>
+				<p>This is a side project, so it might take a while to get to the finish line.</p>
+				<p>But I'm already eager to use it and share it!</p>
+			</div>
+    	</div>
+    </main>
+  </body>
+</html>
